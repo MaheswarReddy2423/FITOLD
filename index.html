@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="meditation.png">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ 
+    <title>FITOLD</title>
+</head>
+<body style="background-color: rgb(102, 255, 0); ">
+        <br>
+        <img class="i1" src="meditation.png" alt="Logo"><br>
+        <h1>Welcome to FITOLD</h1>
+        <h2>Home Workouts backed by science For Old age people</h2>
+        <br><br>
+        <div class="row">
+            <div class="col" style="padding-left: 160px;"><br>
+                <img style="width: 150px; height: 150px;" src="w1.png" alt=""><br><br>
+                <button type="button" class="btn btn-outline-info"><h3><a href="walking.html">Walking</a></h3></button><br><br>
+            </div>
+            <div  class="col" style="padding-left: 160px;"><br>
+                <img style="width: 150px; height: 150px;" src="m1.png" alt=""><br><br>
+                <button type="button" class="btn btn-outline-info"><h3><a href="Meditation.html">Meditation</a></h3></button><br><br>
+            </div>
+            <div  class="col"  style="padding-left: 160px;"><br>
+                <img style="width: 150px; height: 150px;" src="c1.png" alt=""><br><br>
+                <button type="button" class="btn btn-outline-info"><h3><a href="Chair.html">Chair Yoga</a></h3></button><br><br>
+            </div>
+            <div class="col"  style="padding-left: 160px;"><br>
+                <img style="width: 150px; height: 150px;" src="r1.png" alt=""><br><br>
+                <button type="button" class="btn btn-outline-info"><h3><a href="Band.html">band workout</a></h3></button><br><br>
+            </div>
+        </div>
+        <script>
+            function showPopup() {
+              alert("Time to take Medicines!");
+              sound.play();
+            }
+          
+            // set the time you want the message to appear
+            var triggerHour = 7;
+            var triggerMinutes = 00;
+          
+            // get the current time
+            var date = new Date();
+            var currentHour = date.getHours();
+            var currentMinutes = date.getMinutes();
+            var sound = new Audio("alert.mp3");
+            var sound1 = new Audio("alert.mp3");
+          
+            // check if the current time matches the trigger time
+            if(7<=currentHour<=21 && currentMinutes === 30 || currentMinutes === 00)
+            {
+                alert("Drink Water");
+            }
+            if(currentHour >= 7 && currentMinutes === 00)
+            {
+                alert("Good Morning!");
+                sound1.play();
+            }
+            else if(currentHour === 8 && currentMinutes === 00)
+            {
+                alert("Time to take Breakfast!");
+                sound.play();
+            }
+            else if (currentHour === 8 && currentMinutes === 30) {
+              showPopup();
+            
+            }
+            else if(currentHour === 12 && currentMinutes === 30)
+            {
+                alert("Time to take Lunch!");
+                sound.play();
+            }
+            else if (currentHour === 7 && currentMinutes === 30) {
+              showPopup();
+            }
+            else if(currentHour === 14 && currentMinutes === 30)
+            {
+                alert("Time to take Short nap!");
+                sound.play();
+            }
+            else if (currentHour === 16 && currentMinutes === 30) {
+                alert("Wake Up!");
+                sound.play();
+            }
+            else if(currentHour === 20 && currentMinutes === 00)
+            {
+                alert("Time to take Dinner!");
+                sound.play();
+            }
+            else if (currentHour === 20 && currentMinutes === 30) {
+              showPopup();
+            }
+            else if (currentHour >= 21) {
+                alert("Time to take Sleep!");
+                sound.play();
+            }
+          
+            // setInterval to check for the trigger time every minute
+            setInterval(() => {
+              var date = new Date();
+              var currentHour = date.getHours();
+              var currentMinutes = date.getMinutes();
+          
+              if(7<=currentHour<=21 && currentMinutes === 30 || currentMinutes === 00)
+            {
+                alert("Drink Water");
+            }
+            }, 1800000); // 60000 milliseconds = 1 minute
+          </script>
+          
+          
+          
+        
+
+
+    
+    
+        
+        
+        
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slow-Walking</title>
+    <link rel="icon" href="walking.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body style="background-color: aquamarine; text-align: center;">
+    <br><br>
+    <h2>Let's Do Slow walking for 5 minutes</h2><br><br>
+    <img style="height: 200px; width: 200px;" src="sw.png" alt="">
+    <br><br>
+    <button class="btn btn-success" onclick="startTimer()">Start Timer</button>
+<p id="timer"></p>
+
+<script>
+  var count = 300; // 5 minutes
+  var counter;
+  var timerDisplay = document.getElementById("timer");
+
+  function startTimer() {
+    counter = setInterval(timer, 1000);
+  }
+
+  function timer() {
+    count = count - 1;
+    if (count <= 0) {
+      clearInterval(counter);
+      timerDisplay.innerHTML = "Time's up!";
+      return;
+    }
+
+    var seconds = count % 60;
+    var minutes = Math.floor(count / 60);
+    var time = minutes + ":" + seconds;
+    timerDisplay.innerHTML = time;
+  }
+</script>
+<br><br>
+
+<button type="button" class="btn btn-dark"><a href="walking.html">Go Back</a></button>
+</body>
+</html>
