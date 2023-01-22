@@ -36,8 +36,9 @@
         </div>
         <script>
             function showPopup() {
+               sound.play();
               alert("Time to take Medicines!");
-              sound.play();
+              
             }
           
             // set the time you want the message to appear
@@ -54,17 +55,20 @@
             // check if the current time matches the trigger time
             if(7<=currentHour<=21 && currentMinutes === 30 || currentMinutes === 00)
             {
+                sound.play();
                 alert("Drink Water");
             }
             if(currentHour >= 7 && currentMinutes === 00)
             {
+                sound.play();
                 alert("Good Morning!");
-                sound1.play();
+                
             }
             else if(currentHour === 8 && currentMinutes === 00)
             {
-                alert("Time to take Breakfast!");
                 sound.play();
+                alert("Time to take Breakfast!");
+                
             }
             else if (currentHour === 8 && currentMinutes === 30) {
               showPopup();
@@ -72,16 +76,18 @@
             }
             else if(currentHour === 12 && currentMinutes === 30)
             {
-                alert("Time to take Lunch!");
                 sound.play();
+                alert("Time to take Lunch!");
+                
             }
             else if (currentHour === 7 && currentMinutes === 30) {
               showPopup();
             }
             else if(currentHour === 14 && currentMinutes === 30)
             {
-                alert("Time to take Short nap!");
                 sound.play();
+                alert("Time to take Short nap!");
+                
             }
             else if (currentHour === 16 && currentMinutes === 30) {
                 alert("Wake Up!");
@@ -96,8 +102,9 @@
               showPopup();
             }
             else if (currentHour >= 21) {
-                alert("Time to take Sleep!");
                 sound.play();
+                alert("Time to take Sleep!");
+                
             }
           
             // setInterval to check for the trigger time every minute
